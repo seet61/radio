@@ -1,0 +1,20 @@
+{
+  "name": "radio",
+  "version": "0.0.0",
+  "description": "yourwave radio app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "seet61",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "express": "~4.13.3",
+    "react-dom": "~0.14.6",
+    "react": "~0.14.6",
+    "babelify": "~7.2.0",
+    "babel-preset-react": "~6.3.13",
+    "browserify": "~13.0.0",
+    "config": "~1.19.0"
+  }
+}
