@@ -19,3 +19,4 @@ node index.js
 Для корректной сборки React необходимо установить:
 npm install --global babel-cli
 npm install babel-preset-react
+
