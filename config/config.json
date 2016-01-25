@@ -1,7 +1,7 @@
 {
 	"Radio" : {
 		"dbConfig" : {
-			"host" : "10.1.10.150",
+			"host" : "127.0.0.1",
 			"port" : "5432",
 			"dbName" : "music",
 			"login" : "yourwave_radio",
