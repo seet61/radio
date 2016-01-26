@@ -1,11 +1,9 @@
 #!/usr/bin/env make -rRf
 
 APP_NAME := yourwave radio
+export NODE_ENV=config
 
-all: compile
-	@echo "[ Run app... ]"
-	@export NODE_ENV=config
-	@node index.js
+all: compile run
 
 compile:
 	@echo "[ Compile react js ]"
@@ -14,5 +12,4 @@ compile:
 
 run:
 	@echo "[ Run app... ]"
-	@export NODE_ENV=config
 	@node index.js
