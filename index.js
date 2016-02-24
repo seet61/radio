@@ -6,33 +6,41 @@
 var express = require('express');
 var client  = require('./public/client');
 var config  = require('config');
-
-//Модули приложения
 var db      = require('db');
 
-// Переменные
-var app = express();
-
-//Конфигурация
-//Каталог с HTML шаблонами
-app.use(express.static(__dirname + '/view'));
-//Каталог статических файлов
-app.use('/static', express.static('public'));
-//Подключение к БД
-//var dbConfig = config.get('Radio.dbConfig');
-console.log(config.get('Radio.dbConfig.host'), config.get('Radio.dbConfig.port'));
-
-
-db.host = config.get('Radio.dbConfig.host');
-db.port = config.get('Radio.dbConfig.port');
-db.say();
-
+var debug   = config.get('debug');
 
 // Логирование
 var myLogger = function (req, res, next) {
   //console.log(req);
   next();
 };
+
+
+//Серверная
+console.log(config.get('Radio.dbConfig.host'), config.get('Radio.dbConfig.port'));
+
+db.host = config.get('Radio.dbConfig.host');
+db.port = config.get('Radio.dbConfig.port');
+db.username = config.get('Radio.dbConfig.username');
+db.password = config.get('Radio.dbConfig.password');
+db.dbName = config.get('Radio.dbConfig.dbName');
+db.debug = debug;
+db.connect();
+
+
+
+
+
+//Клиентская часть
+// Переменные
+var app     = express();
+
+//Конфигурация
+//Каталог с HTML шаблонами
+app.use(express.static(__dirname + '/view'));
+//Каталог статических файлов
+app.use('/static', express.static('public'));
 
 app.use(myLogger);
 
