@@ -10,35 +10,42 @@ html
     link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
     link(rel='stylesheet', href='/stylesheets/materialize.css', media='screen,projection')
     link(rel='stylesheet', href='/stylesheets/style.css', media='screen,projection')
+
   body
+
+    ul(id='dropdown_menu', class='dropdown-content blue-text')
+      li: a(href='#') О Вас
+      li: a(href='#') О Нас
+
+    nav
+      div(class='nav-wrapper')
+        ul(class='right hide-on-med-and-down')
+          li.last: a(href='#', class='dropdown-button blue-text', data-activates="dropdown_menu") Информация
+            i(class='material-icons right') arrow_drop_down
+
+    main
+      block content
+
+    //
+        footer(class=['page-footer', 'blue', 'stiky'])
+            div(class='container')
+              div(class='row')
+                div(class=['col', 'l6', 's12'])
+                  h5(class='white-text')
+                    | История компании
+                div(class=['col', 'l3', 's12'])
+                  h5(class='white-text')
+                    | Настройки
+                div(class=['col', 'l3', 's12'])
+                  h5(class='white-text')
+                    | О нас
+
+            div(class='footer-copyright')
+              div(class='container')
+                | © 2016 YourWave Team
 
     // Scripts
     script(src='https://code.jquery.com/jquery-2.1.1.min.js')
     script(src='/javascripts/materialize.js')
     script(src='/javascripts/init.js')
-
-    nav(class=['light-blue', 'lighten-1'], role='navigation')
-      div(class=['nav-wrapper', 'container'])
-        a(id='logo-container', class='brand-logo') Radio
-
-    main
-      block content
-
-    footer(class=['page-footer', 'blue', 'stiky'])
-        div(class='container')
-          div(class='row')
-            div(class=['col', 'l6', 's12'])
-              h5(class='white-text')
-                | История компании
-            div(class=['col', 'l3', 's12'])
-              h5(class='white-text')
-                | Настройки
-            div(class=['col', 'l3', 's12'])
-              h5(class='white-text')
-                | О нас
-
-        div(class='footer-copyright')
-          div(class='container')
-            | © 2016 YourWave Team
-
-
+    script(src='/javascripts/custom.js')
