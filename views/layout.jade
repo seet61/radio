@@ -1,7 +1,44 @@
 doctype html
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1.0")
+    title
+      | YourWave Radio
+
+    // CSS
+    link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+    link(rel='stylesheet', href='/stylesheets/materialize.css', media='screen,projection')
+    link(rel='stylesheet', href='/stylesheets/style.css', media='screen,projection')
   body
-    block content
+
+    // Scripts
+    script(src='https://code.jquery.com/jquery-2.1.1.min.js')
+    script(src='/javascripts/materialize.js')
+    script(src='/javascripts/init.js')
+
+    nav(class=['light-blue', 'lighten-1'], role='navigation')
+      div(class=['nav-wrapper', 'container'])
+        a(id='logo-container', class='brand-logo') Radio
+
+    main
+      block content
+
+    footer(class=['page-footer', 'blue', 'stiky'])
+        div(class='container')
+          div(class='row')
+            div(class=['col', 'l6', 's12'])
+              h5(class='white-text')
+                | История компании
+            div(class=['col', 'l3', 's12'])
+              h5(class='white-text')
+                | Настройки
+            div(class=['col', 'l3', 's12'])
+              h5(class='white-text')
+                | О нас
+
+        div(class='footer-copyright')
+          div(class='container')
+            | © 2016 YourWave Team
+
+
