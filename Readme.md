@@ -20,3 +20,6 @@ node index.js
 npm install --global babel-cli
 npm install babel-preset-react
 
+
+Для БД на случай отсутствия прав у пользователя
+GRANT SELECT ON TABLE radio_cats TO yourwave_radio;
