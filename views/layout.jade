@@ -12,22 +12,22 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css', media='screen,projection')
 
   body
-    img
-    //div(class='img')
+    div(id='background')
     //  img(src='/images/waves.jpg')
 
-    ul(id='dropdown_menu', class='dropdown-content blue-text')
-      li: a(href='#') О Вас
-      li: a(href='#') О Нас
+    div
+      ul(id='dropdown_menu', class='dropdown-content blue-text')
+        li: a(href='#') О Вас
+        li: a(href='#') О Нас
 
-    nav
-      div(class='nav-wrapper')
-        ul(class='right hide-on-med-and-down')
-          li.last: a(href='#', class='dropdown-button blue-text', data-activates="dropdown_menu") Информация
-            i(class='material-icons right') arrow_drop_down
+      nav
+        div(class='nav-wrapper')
+          ul(class='right hide-on-med-and-down')
+            li.last: a(href='#', class='dropdown-button blue-text', data-activates="dropdown_menu") Информация
+              i(class='material-icons right') arrow_drop_down
 
-    main
-      block content
+      main
+        block content
 
     //
         footer(class=['page-footer', 'blue', 'stiky'])
