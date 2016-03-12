@@ -22,30 +22,14 @@ html
 
       nav
         div(class='nav-wrapper')
+          block menu
+
           ul(class='right hide-on-med-and-down')
             li.last: a(href='#', class='dropdown-button blue-text', data-activates="dropdown_menu") Информация
               i(class='material-icons right') arrow_drop_down
 
       main
         block content
-
-    //
-        footer(class=['page-footer', 'blue', 'stiky'])
-            div(class='container')
-              div(class='row')
-                div(class=['col', 'l6', 's12'])
-                  h5(class='white-text')
-                    | История компании
-                div(class=['col', 'l3', 's12'])
-                  h5(class='white-text')
-                    | Настройки
-                div(class=['col', 'l3', 's12'])
-                  h5(class='white-text')
-                    | О нас
-
-            div(class='footer-copyright')
-              div(class='container')
-                | © 2016 YourWave Team
 
     // Scripts
     script(src='https://code.jquery.com/jquery-2.1.1.min.js')

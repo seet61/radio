@@ -9,16 +9,24 @@ block content
       div(class='row center')
         h5(class='header center blue-text')
           | Данный проект призван предоставить Вам возможность слушать прямые эфиры различных радиостанций со всего мира
-    br
-    div(class='container')
-      div(class='row center')
-        div(class='input-field col s5')
-          select
-            option(value='', disabled, selected) Выберите Жанр
-          label.blue-text Жанры
-        div(class='input-field col s1')
-        div(class='input-field col s5')
-          select
-            option(value='', disabled, selected) Выберите Страну
-          label.blue-text Страны
+
+  br
+  div(class='row')
+    form(name="login", action="/category", method="post")
+      div(class='container')
+        div(class='row center')
+          div(class='input-field col s1')
+          div(class='input-field col s5')
+            select
+              option(value='', disabled, selected) Выберите Жанр
+              each category in categories
+                option(value=category.id) #{category.title}
+            label.blue-text Жанры
+          div(class='input-field col s5')
+            select
+              option(value='', disabled, selected) Выберите Страну
+            label.blue-text Страны
+        div(class='row center')
+          button(class='btn waves-effect waves-light light-blue', type='submit', name='action') Выбрать
+            i(class='material-icons right') send
 
