@@ -1,11 +1,10 @@
 var pg = require('pg');
 
-function get_category(connect_string, data_categories) {
-  console.log('connect to db: ' + connect_string);
+function get_category(connect_string, categories) {
+  //console.log('connect to db: ' + connect_string);
   //this initializes a connection pool
   //it will keep idle connections open for a (configurable) 30 seconds
   //and set a limit of 20 (also configurable)
-  var data = '';
   pg.connect(connect_string, function(err, client, done) {
     if(err) {
       return console.error('error fetching client from pool', err);
@@ -18,34 +17,33 @@ function get_category(connect_string, data_categories) {
         return console.error('error running query', err);
       }
       //console.log(result.rows);
-      data_categories(result.rows);
+      categories(result.rows);
     });
   });
-  //console.log(data[0]);
-  //return data;
 }
 
-/*function get_category(connect_string) {
-  var client = new pg.Client(connect_string);
-  client.connect(function(err) {
+function get_countries(connect_string, countries) {
+  //this initializes a connection pool
+  //it will keep idle connections open for a (configurable) 30 seconds
+  //and set a limit of 20 (also configurable)
+  pg.connect(connect_string, function(err, client, done) {
     if(err) {
-      return console.error('could not connect to postgres', err);
+      return console.error('error fetching client from pool', err);
     }
-    client.query('SELECT NOW() AS "theTime"', function(err, result) {
+    client.query('select code2, rus_name from country_codes where radio_stream = true', function(err, result) {
+      //call `done()` to release the client back to the pool
+      done();
+
       if(err) {
         return console.error('error running query', err);
       }
-      console.log(result.rows[0].theTime);
-      //output: Tue Jan 15 2013 19:12:47 GMT-600 (CST)
-      client.end();
+      //console.log(result.rows);
+      countries(result.rows);
     });
-});
-
+  });
 }
-*/
-
 
 
 exports.get_category = get_category;
-
+exports.get_countries = get_countries;
 

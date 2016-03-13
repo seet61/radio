@@ -12,11 +12,21 @@ router.use(function(req, res, next){
 /* GET home page. */
 router.get('/', function(req, res, next) {
   var categories = '';
-  db.get_category(config.get('Radio.dbConfig.connectionString'), function(results){
-    console.log('callback ' + results[0].title);
-    res.render('index', { title: 'Test', categories: results });
+  db.get_category(config.get('Radio.dbConfig.connectionString'), function(categories){
+    console.log('callback ' + categories[0].title);
+    db.get_countries(config.get('Radio.dbConfig.connectionString'), function(countries){
+      console.log('callback ' + countries[0].rus_name);
+      res.render('index', { categories: categories, countries: countries });
+    });
   });
 
+});
+
+router.post('/streams', function(req, res, next) {
+  console.log('request body ' + req.body);
+  console.log(req.body.category_id);
+  console.log(req.body.country_code);
+  res.render('streams');
 });
 
 module.exports = router;

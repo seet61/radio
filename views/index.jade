@@ -12,19 +12,21 @@ block content
 
   br
   div(class='row')
-    form(name="login", action="/category", method="post")
+    form(name="login", action="/streams", method="post")
       div(class='container')
         div(class='row center')
           div(class='input-field col s1')
           div(class='input-field col s5')
-            select
+            select(id='category_id', name='category_id')
               option(value='', disabled, selected) Выберите Жанр
               each category in categories
                 option(value=category.id) #{category.title}
             label.blue-text Жанры
           div(class='input-field col s5')
-            select
+            select(id='country_code', name='country_code')
               option(value='', disabled, selected) Выберите Страну
+              each country in countries
+                option(value=country.code2) #{country.rus_name}
             label.blue-text Страны
         div(class='row center')
           button(class='btn waves-effect waves-light light-blue', type='submit', name='action') Выбрать
