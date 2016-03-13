@@ -2225,6 +2225,7 @@ main {
   flex: 1 0 auto;
 }
 
+
 /* HTML5 display definitions
    ========================================================================== */
 /**
@@ -3385,7 +3386,7 @@ nav ul a span.badge {
 
 @font-face {
   font-family: "Material-Design-Icons";
-  src: url("../font/material-design-icons/Material-Design-Icons.eot?#iefix") format("embedded-opentype"), url("../font/material-design-icons/Material-Design-Icons.woff2") format("woff2"), url("../font/material-design-icons/Material-Design-Icons.woff") format("woff"), url("../font/material-design-icons/Material-Design-Icons.ttf") format("truetype"), url("../font/material-design-icons/Material-Design-Icons.svg#Material-Design-Icons") format("svg");
+  src: url("../images/material-design-icons/Material-Design-Icons.eot?#iefix") format("embedded-opentype"), url("../images/material-design-icons/Material-Design-Icons.woff2") format("woff2"), url("../images/material-design-icons/Material-Design-Icons.woff") format("woff"), url("../images/material-design-icons/Material-Design-Icons.ttf") format("truetype"), url("../images/material-design-icons/Material-Design-Icons.svg#Material-Design-Icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -9789,7 +9790,7 @@ select {
 
 .side-nav {
   position: fixed;
-  width: 240px;
+  width: 40%;
   left: -105%;
   top: 0;
   margin: 0;

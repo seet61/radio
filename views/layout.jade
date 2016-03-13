@@ -13,20 +13,21 @@ html
 
   body
     div(id='background')
-    //  img(src='/images/waves.jpg')
 
     div
-      ul(id='dropdown_menu', class='dropdown-content blue-text')
-        li: a(href='#') О Вас
-        li: a(href='#') О Нас
+      div(class='nav-wrapper')
+        ul(id='dropdown_menu', class='dropdown-content blue-text')
+          li: a(href='#') О Вас
+          li: a(href='#') О Нас
 
-      nav
-        div(class='nav-wrapper')
-          block menu
+        nav(class='lighten-1', role='navigation')
+          div(class=row)
+            block menu
 
-          ul(class='right hide-on-med-and-down')
-            li.last: a(href='#', class='dropdown-button blue-text', data-activates="dropdown_menu") Информация
-              i(class='material-icons right') arrow_drop_down
+            div(class='nav-wrapper right')
+              ul(class='right hide-on-med-and-down')
+                li.last: a(href='#', class='dropdown-button blue-text', data-activates="dropdown_menu") Информация
+                  i(class='material-icons right') arrow_drop_down
 
       main
         block content

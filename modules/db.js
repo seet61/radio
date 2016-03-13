@@ -43,7 +43,35 @@ function get_countries(connect_string, countries) {
   });
 }
 
+function get_streams(connect_string, cid, country_code, stations) {
+  //this initializes a connection pool
+  //it will keep idle connections open for a (configurable) 30 seconds
+  //and set a limit of 20 (also configurable)
+  if (country_code == undefined) {
+    query = 'select title, country, url, img from radio_streams where cid = ' + cid
+        + ' order by country, title';
+  } else {
+    query = 'select title, country, url, img from radio_streams where cid = ' + cid
+        + ' and lower(country) = lower(\'' + country_code + '\')' + ' order by country, title';
+  };
+  //console.log('query ' + query);
+  pg.connect(connect_string, function(err, client, done) {
+    if(err) {
+      return console.error('error fetching client from pool', err);
+    }
+    client.query(query, function(err, result) {
+      //call `done()` to release the client back to the pool
+      done();
+
+      if(err) {
+        return console.error('error running query', err);
+      }
+      //console.log(result.rows);
+      stations(result.rows);
+    });
+  });
+}
 
 exports.get_category = get_category;
 exports.get_countries = get_countries;
-
+exports.get_streams = get_streams;
