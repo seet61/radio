@@ -10,7 +10,7 @@ router.use(function(req, res, next){
 });
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+/*router.get('/', function(req, res, next) {
   var categories = '';
   db.get_category(config.get('Radio.dbConfig.connectionString'), function(categories){
     //console.log('callback ' + categories[0].title);
@@ -20,7 +20,19 @@ router.get('/', function(req, res, next) {
     });
   });
 
+});*/
+
+
+router.get('/', function(req, res, next) {
+  var view = {
+    title: "Joe",
+    calc: function () {
+      return 2 + 4;
+    }
+  };
+  res.render('index.html', view);
 });
+
 
 router.post('/streams', function(req, res, next) {
   //console.log('request body ' + req.body);

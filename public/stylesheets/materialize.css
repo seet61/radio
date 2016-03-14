@@ -9790,7 +9790,7 @@ select {
 
 .side-nav {
   position: fixed;
-  width: 40%;
+  width: 700px;
   left: -105%;
   top: 0;
   margin: 0;

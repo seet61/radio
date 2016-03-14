@@ -10,8 +10,10 @@ $( document ).ready(function(){
 
     //Stream page
     $('.button-collapse').sideNav({
-      //menuWidth: 512, // Default is 240
-      //edge: 'left', // Choose the horizontal origin
+      menuWidth: 700, // Default is 240
+      edge: 'left', // Choose the horizontal origin
+      //activationWidth: 70,
+      left: 0,
       closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
       }
     );
