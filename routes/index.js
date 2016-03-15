@@ -9,28 +9,20 @@ router.use(function(req, res, next){
     next();
 });
 
-/* GET home page. */
-/*router.get('/', function(req, res, next) {
-  var categories = '';
+router.get('/', function(req, res, next) {
   db.get_category(config.get('Radio.dbConfig.connectionString'), function(categories){
     //console.log('callback ' + categories[0].title);
     db.get_countries(config.get('Radio.dbConfig.connectionString'), function(countries){
-      //console.log('callback ' + countries[0].rus_name);
-      res.render('index', { categories: categories, countries: countries });
+      var view = {
+        "block_menu": false,
+        "template_index": true,
+        /*"template_stream": false,*/
+        "categories": categories,
+        "countries": countries
+      };
+      res.render('layout.html', view);
     });
   });
-
-});*/
-
-
-router.get('/', function(req, res, next) {
-  var view = {
-    title: "Joe",
-    calc: function () {
-      return 2 + 4;
-    }
-  };
-  res.render('index.html', view);
 });
 
 

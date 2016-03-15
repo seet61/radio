@@ -2220,6 +2220,11 @@ body {
     filter:alpha(opacity=40);
 }
 
+#content {
+    z-index:1;
+    position:relative;
+}
+
 main {
   display: block;
   flex: 1 0 auto;
