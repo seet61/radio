@@ -14,9 +14,7 @@ router.get('/', function(req, res, next) {
     //console.log('callback ' + categories[0].title);
     db.get_countries(config.get('Radio.dbConfig.connectionString'), function(countries){
       var view = {
-        "block_menu": false,
         "template_index": true,
-        /*"template_stream": false,*/
         "categories": categories,
         "countries": countries
       };
@@ -28,11 +26,15 @@ router.get('/', function(req, res, next) {
 
 router.post('/streams', function(req, res, next) {
   //console.log('request body ' + req.body);
-  //console.log(req.body.category_id);
-  //console.log(req.body.country_code);
+  console.log('category ' + req.body.category_id);
+  console.log('country ' + req.body.country_code);
   db.get_streams(config.get('Radio.dbConfig.connectionString'), req.body.category_id, req.body.country_code, function(stations){
-    //console.log('callback ' + stations[0].title);
-    res.render('streams', { stations: stations });
+    var view = {
+      "block_menu": true,
+      "template_stream": true,
+      "data": stations
+    };
+    res.render('layout.html', view);
   });
 });
 

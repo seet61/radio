@@ -21,27 +21,39 @@
     </ul>
 
     <nav class="lighten-1" role="navigation">
-      {{#block_menu}}
-        Menu
-      {{/block_menu}}
-
       <ul class="right hide-on-med-and-down">
         <li><a class="dropdown-button blue-text" href="#!" data-activates="dropdown1">Информация<i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>
+
+
+
+      {{#block_menu}}
+        <ul id="slide-out" class="side-nav">
+          {{#data}}
+            <li><a class="blue-text">{{title}}</a></li>
+          {{/data}}
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse show-on-large blue-text"><i class="mdi-navigation-menu"></i></a>
+      {{/block_menu}}
     </nav>
 
-    <!-- Parts of templates-->
-    {{#template_index}}
-      {{> index }}
-    {{/template_index}}
-  </div>
+    <main>
+      <!-- Parts of templates-->
+      {{#template_index}}
+        {{> index }}
+      {{/template_index}}
+      {{#template_stream}}
+        {{> stream }}
+      {{/template_stream}}
+    </main>
 
 
-  <!--  Scripts-->
-  <script src="javascripts/jquery-2.2.1.min.js"></script>
-  <script src="javascripts/materialize.js"></script>
-  <script src="javascripts/init.js"></script>
-  <script src="javascripts/custom.js"></script>
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="javascripts/materialize.js"></script>
+    <script src="javascripts/init.js"></script>
+    <script src="javascripts/custom.js"></script>
 
+    </div>
   </body>
 </html>

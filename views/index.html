@@ -10,7 +10,7 @@
         <form class="col s12" action="/streams" method="post">
           <div class="row">
               <div class="input-field col s6">
-                <select>
+                <select id="category_id" name="category_id">
                   <option value="" disabled selected>Выберите жанр</option>
                   {{#categories}}
                     <option value={{id}}>{{title}}</option>
@@ -19,13 +19,13 @@
                 <label>Жанры</label>
               </div>
               <div class="input-field col s6">
-                <select>
-                  <option value="" disabled selected>Выберите жанр</option>
-                  {{#categories}}
-                    <option value={{id}}>{{title}}</option>
-                  {{/categories}}
+                <select id="country_code" name="country_code">
+                  <option value="" disabled selected>Выберите страну</option>
+                  {{#countries}}
+                    <option value={{code2}}>{{rus_name}}</option>
+                  {{/countries}}
                 </select>
-                <label>Жанры</label>
+                <label>Страны</label>
               </div>
           </div>
           <div class="row center">
