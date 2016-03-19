@@ -32,6 +32,7 @@ router.post('/streams', function(req, res, next) {
     var view = {
       "block_menu": true,
       "template_stream": true,
+      "block_player": true,
       "data": stations
     };
     res.render('layout.html', view);

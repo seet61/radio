@@ -9,9 +9,18 @@
   <link href="stylesheets/icon.css" rel="stylesheet">
   <link href="stylesheets/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="stylesheets/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="stylesheets/custom.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <!-- <link type="text/css" href="skin/pink.flag/css/jplayer.pink.flag.css" rel="stylesheet" /> -->
+
+  <!--  Scripts-->
+  <script src="javascripts/jquery-2.2.1.min.js"></script>
+  <script src="javascripts/materialize.js"></script>
+  <script src="javascripts/custom.js"></script>
+  <script src="javascripts/jquery.jplayer.min.js"></script>
+
 </head>
 <body>
-
   <div id="background"></div>
 
   <div id="content">
@@ -30,7 +39,7 @@
       {{#block_menu}}
         <ul id="slide-out" class="side-nav">
           {{#data}}
-            <li><a class="blue-text">{{title}}</a></li>
+            <li><a class="blue-text" onclick="startStream('{{url}}', '{{img}}')">{{title}}</a></li>
           {{/data}}
         </ul>
         <a href="#" data-activates="slide-out" class="button-collapse show-on-large blue-text"><i class="mdi-navigation-menu"></i></a>
@@ -47,12 +56,9 @@
       {{/template_stream}}
     </main>
 
-
-    <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="javascripts/materialize.js"></script>
-    <script src="javascripts/init.js"></script>
-    <script src="javascripts/custom.js"></script>
+    {{#block_player}}
+      {{> player }}
+    {{/block_player}}
 
     </div>
   </body>
