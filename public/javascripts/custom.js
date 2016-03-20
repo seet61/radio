@@ -22,21 +22,24 @@ $( document ).ready(function(){
 });
 
 function startStream(url, img) {
-  $("#cover-art-small").attr("src", img);
+  //Image of radio station
   $("#btn_play").ready(function(){
-    console.log('btn text is ' + $("#btn_play").text());
-    if ($("#btn_play").text() == "play_circle_outline") {
-      $("#btn_play").attr("text", "pause_circle_outline");
+    if (img != '') {
+      $("#cover-art-small").attr("src", img);
     } else {
-      $("#btn_play").attr("text", "play_circle_outline");
-    };
+      $("#cover-art-small").attr("src", "images/song_default.png");
+    }
   });
-  /*if ($("#btn_play").text() == "play_circle_outline" {
-    $("#btn_play").attr("text", "pause_circle_outline");
-  } else {
-    $("#btn_play").attr("text", "play_circle_outline");
-  }
-  );*/
+  //Button play
+  $("#btn_play").text("pause_circle_outline");
+  /*$("#btn_play").ready(function(){
+    console.log('btn text is ' + ($("#btn_play").text() == "play_circle_outline"));
+    if ($("#btn_play").text() == "play_circle_outline") {
+      $("#btn_play").text("pause_circle_outline");
+    } else {
+      $("#btn_play").text("play_circle_outline");
+    }
+  });*/
   //JPLayer
   $("#jquery_jplayer_1").jPlayer({
     ready: function () {
