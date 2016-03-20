@@ -19,43 +19,49 @@ $( document ).ready(function(){
       }
     );
 
+    $("#btn_play").click(function(){
+      //console.log('btn text is ' + ($("#btn_play").text() == "play_circle_outline"));
+      if ($("#btn_play").text() == "play_circle_outline") {
+        $("#btn_play").text("pause_circle_outline");
+        playSound();
+      } else {
+        $("#btn_play").text("play_circle_outline");
+        pauseSound();
+      };
+    });
 });
 
-function startStream(url, img) {
+function playSound (url) {
+  if (url != "") {
+    $("#stream").attr("src", url);
+  }
+  document.getElementById('stream').play();
+};
+
+function pauseSound () {
+  document.getElementById('stream').pause();
+};
+
+function set_volume() {
+  //console.log("volume: " + $("span.value").text());
+  document.getElementById('stream').volume=parseInt($("span.value").text()) / 100;
+};
+
+
+function startStream(title, url, img) {
   //Image of radio station
   $("#btn_play").ready(function(){
     if (img != '') {
       $("#cover-art-small").attr("src", img);
     } else {
       $("#cover-art-small").attr("src", "images/song_default.png");
-    }
+    };
   });
+  //Station name
+  $("#station_name").text(title);
   //Button play
   $("#btn_play").text("pause_circle_outline");
-  /*$("#btn_play").ready(function(){
-    console.log('btn text is ' + ($("#btn_play").text() == "play_circle_outline"));
-    if ($("#btn_play").text() == "play_circle_outline") {
-      $("#btn_play").text("pause_circle_outline");
-    } else {
-      $("#btn_play").text("play_circle_outline");
-    }
-  });*/
-  //JPLayer
-  $("#jquery_jplayer_1").jPlayer({
-    ready: function () {
-      $(this).jPlayer("setMedia", {
-        mp3: url
-      });
-    },
-    cssSelectorAncestor: "#jp_container_1",
-    swfPath: "/javascripts",
-    supplied: "m4a, oga",
-    useStateClassSkin: true,
-    autoBlur: false,
-    smoothPlayBar: true,
-    keyEnabled: true,
-    remainingDuration: true,
-    toggleDuration: true
-  });
+  playSound(url);
 };
+
 

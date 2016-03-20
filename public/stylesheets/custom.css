@@ -41,6 +41,10 @@ footer {
   border-radius: 2px;
 }
 
+#volume_bar {
+  padding-top: 2%;
+}
+
 .effect7
 {
     position:relative;

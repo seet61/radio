@@ -1,12 +1,30 @@
+<!-- <audio controls>
+  <source id="audio_source" src="" type="audio/mpeg">
+</audio> -->
+
+<audio id="stream" src=""></audio>
+<!-- <div>
+  <button onclick="document.getElementById('demo').play()">Play the Audio</button>
+  <button onclick="document.getElementById('demo').pause()">Pause the Audio</button>
+  <button onclick="document.getElementById('demo').volume+=0.1">Increase Volume</button>
+  <button onclick="document.getElementById('demo').volume-=0.1">Decrease Volume</button>
+</div> -->
+
 <footer class="page-footer effect7 lighten-5 stiky">
-  <div id="jquery_jplayer_1" class="jp-jplayer"></div>
   <div class="row">
-    <div class="col s2 offset-s5 center">
+    <div class="col s5 center">
+      <h4 id="station_name" class="flow-text blue-text"></h4>
+    </div>
+    <div class="col s2 center">
       <a class="waves-effect waves-light">
         <i id="btn_play" class="material-icons medium blue-text">play_circle_outline</i>
       </a>
 
     </div>
-    <div class="col s1">7</div>
+    <div class="col s4">
+      <p class="range-field">
+        <input type="range" id="volume_range" min="0" max="100" onchange="set_volume()" />
+      </p>
+    </div>
   </div>
 </footer>

@@ -15,7 +15,6 @@
   <script src="javascripts/jquery-2.2.1.min.js"></script>
   <script src="javascripts/materialize.js"></script>
   <script src="javascripts/custom.js"></script>
-  <script src="javascripts/jquery.jplayer.min.js"></script>
 
 </head>
 <body>
@@ -37,7 +36,7 @@
       {{#block_menu}}
         <ul id="slide-out" class="side-nav">
           {{#data}}
-            <li><a class="blue-text" onclick="startStream('{{url}}', '{{img}}')">{{title}}</a></li>
+            <li><a class="blue-text" onclick="startStream('{{title}}', '{{url}}', '{{img}}')">{{title}}</a></li>
           {{/data}}
         </ul>
         <a href="#" data-activates="slide-out" class="button-collapse show-on-large blue-text"><i class="mdi-navigation-menu"></i></a>
