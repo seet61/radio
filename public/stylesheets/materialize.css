@@ -7993,7 +7993,7 @@ small {
 }
 
 .tabs .tab a {
-  color: #ee6e73;
+  color: #2196f3;
   display: block;
   width: 100%;
   height: 100%;
@@ -8003,7 +8003,7 @@ small {
 }
 
 .tabs .tab a:hover {
-  color: #f9c9cb;
+  color: #90caf9;
 }
 
 .tabs .tab.disabled a {
@@ -8015,7 +8015,7 @@ small {
   position: absolute;
   bottom: 0;
   height: 2px;
-  background-color: #f6b2b5;
+  background-color: #2196f3;
   will-change: left, right;
 }
 
@@ -8931,7 +8931,7 @@ textarea.materialize-textarea + label:after {
 }
 
 .input-field label {
-  color: #9e9e9e;
+  color: #2196f3;
   position: absolute;
   top: 0.8rem;
   left: 0.75rem;
@@ -9674,7 +9674,7 @@ input[type=range]::-moz-range-thumb {
   height: 14px;
   width: 14px;
   border-radius: 50%;
-  background: #26a69a;
+  background: #2196f3;
   margin-top: -5px;
 }
 
@@ -9712,7 +9712,7 @@ input[type=range]::-ms-thumb {
   height: 14px;
   width: 14px;
   border-radius: 50%;
-  background: #26a69a;
+  background: #2196f3;
 }
 
 input[type=range]:focus::-ms-fill-lower {
