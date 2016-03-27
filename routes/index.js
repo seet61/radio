@@ -39,4 +39,26 @@ router.post('/streams', function(req, res, next) {
   });
 });
 
+router.post('/search', function(req, res, next) {
+  //console.log('request body ' + req.body);
+  console.log('category ' + req.body.search_name);
+  db.search_stations(config.get('Radio.dbConfig.connectionString'), req.body.search_name, function(stations){
+    var view = {
+      "block_menu": true,
+      "template_stream": true,
+      "block_player": true,
+      "data": stations
+    };
+    res.render('layout.html', view);
+  });
+});
+
+router.get('/about', function(req, res, next) {
+  console.log('about');
+  var view = {
+    "template_about": true
+  };
+  res.render('layout.html', view);
+});
+
 module.exports = router;

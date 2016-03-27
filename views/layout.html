@@ -22,8 +22,7 @@
 
   <div id="content">
     <ul id="dropdown1" class="dropdown-content">
-      <li><a href="#!" class="blue-text">О Вас</a></li>
-      <li><a href="#!" class="blue-text">О Нас</a></li>
+      <li><a href="/about" class="blue-text">О Нас</a></li>
     </ul>
 
     <nav class="lighten-1" role="navigation">
@@ -31,7 +30,7 @@
         <li><a class="dropdown-button blue-text" href="#!" data-activates="dropdown1">Информация<i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>
 
-
+      <a href="/" class="brand-logo center blue-text">YourWave Radio</a>
 
       {{#block_menu}}
         <ul id="slide-out" class="side-nav">
@@ -51,6 +50,9 @@
       {{#template_stream}}
         {{> stream }}
       {{/template_stream}}
+      {{#template_about}}
+        {{> about }}
+      {{/template_about}}
     </main>
 
     {{#block_player}}

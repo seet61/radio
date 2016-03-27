@@ -1,14 +1,4 @@
-<!-- <audio controls>
-  <source id="audio_source" src="" type="audio/mpeg">
-</audio> -->
-
 <audio id="stream" src=""></audio>
-<!-- <div>
-  <button onclick="document.getElementById('demo').play()">Play the Audio</button>
-  <button onclick="document.getElementById('demo').pause()">Pause the Audio</button>
-  <button onclick="document.getElementById('demo').volume+=0.1">Increase Volume</button>
-  <button onclick="document.getElementById('demo').volume-=0.1">Decrease Volume</button>
-</div> -->
 
 <footer class="page-footer effect7 lighten-5 stiky">
   <div class="row">
@@ -23,8 +13,12 @@
     </div>
     <div class="col s4">
       <p class="range-field">
+        <i class="material-icons medium blue-text">volume_mute</i>
         <input type="range" id="volume_range" min="0" max="100" onchange="set_volume()" />
       </p>
+    </div>
+    <div class="col s1">
+      <i class="material-icons medium blue-text">volume_up</i>
     </div>
   </div>
 </footer>
