@@ -66,6 +66,7 @@ function startStream(title, url, img) {
   $("#station_name").text(title);
   //Button play
   $("#btn_play").text("pause_circle_outline");
+  document.getElementById('stream').volume=0.5;
   playSound(url);
 };
 
