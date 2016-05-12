@@ -2,12 +2,9 @@ $( document ).ready(function(){
     //Navigation menu
     $(".dropdown-button").dropdown();
 
-
     //Index page
-    //Select
     $('select').material_select();
     $('ul.tabs').tabs();
-
 
     //Stream page
     $('.materialboxed').materialbox();
@@ -19,6 +16,11 @@ $( document ).ready(function(){
       closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
       }
     );
+
+    //Init audio.js
+    audiojs.events.ready(function() {
+      var as = audiojs.createAll();
+    });
 
     $("#btn_play").click(function(){
       //console.log('btn text is ' + ($("#btn_play").text() == "play_circle_outline"));
@@ -32,16 +34,12 @@ $( document ).ready(function(){
     });
 });
 
-
-
-
 function playSound (url) {
   if (url != "") {
     $("#stream").attr("src", url);
   }
   document.getElementById('stream').play();
 };
-
 
 function pauseSound () {
   document.getElementById('stream').pause();
@@ -51,7 +49,6 @@ function set_volume() {
   //console.log("volume: " + $("span.value").text());
   document.getElementById('stream').volume=parseInt($("span.value").text()) / 100;
 };
-
 
 function startStream(title, url, img) {
   //Image of radio station

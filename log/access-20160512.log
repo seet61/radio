@@ -1,0 +1,44 @@
+10.1.10.110 - - [12/May/2016:16:32:51 +0000] "POST /streams HTTP/1.1" 200 2753 "http://10.1.10.110:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:32:51 +0000] "GET /stylesheets/icon.css HTTP/1.1" 304 - "http://10.1.10.110:3000/streams" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:32:51 +0000] "GET /stylesheets/materialize.css HTTP/1.1" 304 - "http://10.1.10.110:3000/streams" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:32:52 +0000] "GET /stylesheets/style.css HTTP/1.1" 304 - "http://10.1.10.110:3000/streams" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:32:52 +0000] "GET /stylesheets/custom.css HTTP/1.1" 304 - "http://10.1.10.110:3000/streams" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:32:52 +0000] "GET /javascripts/jquery-2.2.1.min.js HTTP/1.1" 304 - "http://10.1.10.110:3000/streams" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:32:52 +0000] "GET /javascripts/materialize.js HTTP/1.1" 304 - "http://10.1.10.110:3000/streams" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:32:52 +0000] "GET /javascripts/custom.js HTTP/1.1" 200 1794 "http://10.1.10.110:3000/streams" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:32:52 +0000] "GET /images/song_default.png HTTP/1.1" 304 - "http://10.1.10.110:3000/streams" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:32:52 +0000] "GET /images/roboto/Roboto-Regular.woff2 HTTP/1.1" 304 - "http://10.1.10.110:3000/streams" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:32:52 +0000] "GET /images/material-design-icons/Material-Design-Icons.woff2 HTTP/1.1" 304 - "http://10.1.10.110:3000/streams" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+[0mGET / [36m304 [0m77.719 ms - -[0m
+[0mGET /stylesheets/icon.css [36m304 [0m5.371 ms - -[0m
+[0mGET /stylesheets/materialize.css [36m304 [0m5.908 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m5.786 ms - -[0m
+[0mGET /stylesheets/custom.css [36m304 [0m5.847 ms - -[0m
+[0mGET /javascripts/jquery-2.2.1.min.js [36m304 [0m5.810 ms - -[0m
+[0mGET /javascripts/materialize.js [36m304 [0m5.729 ms - -[0m
+[0mGET /javascripts/custom.js [36m304 [0m0.338 ms - -[0m
+[0mGET /images/roboto/Roboto-Regular.woff2 [36m304 [0m0.375 ms - -[0m
+[0mGET /images/roboto/Roboto-Light.woff2 [36m304 [0m0.310 ms - -[0m
+10.1.10.110 - - [12/May/2016:16:36:01 +0000] "GET / HTTP/1.1" 200 19475 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:36:01 +0000] "GET /stylesheets/icon.css HTTP/1.1" 200 621 "http://10.1.10.110:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:36:01 +0000] "GET /stylesheets/style.css HTTP/1.1" 200 262 "http://10.1.10.110:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:36:01 +0000] "GET /stylesheets/materialize.css HTTP/1.1" 200 192013 "http://10.1.10.110:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:36:01 +0000] "GET /javascripts/custom.js HTTP/1.1" 200 1794 "http://10.1.10.110:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:36:01 +0000] "GET /stylesheets/custom.css HTTP/1.1" 200 1030 "http://10.1.10.110:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:36:01 +0000] "GET /javascripts/jquery-2.2.1.min.js HTTP/1.1" 200 85630 "http://10.1.10.110:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:36:01 +0000] "GET /javascripts/materialize.js HTTP/1.1" 200 278615 "http://10.1.10.110:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:36:01 +0000] "GET /images/roboto/Roboto-Regular.woff2 HTTP/1.1" 200 49236 "http://10.1.10.110:3000/stylesheets/materialize.css" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:36:01 +0000] "GET /images/roboto/Roboto-Light.woff2 HTTP/1.1" 200 49380 "http://10.1.10.110:3000/stylesheets/materialize.css" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:36:01 +0000] "GET /images/waves.jpg HTTP/1.1" 200 153338 "http://10.1.10.110:3000/stylesheets/custom.css" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:36:17 +0000] "POST /streams HTTP/1.1" 200 2753 "http://10.1.10.110:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:36:18 +0000] "GET /stylesheets/icon.css HTTP/1.1" 200 621 "http://10.1.10.110:3000/streams" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:36:18 +0000] "GET /stylesheets/materialize.css HTTP/1.1" 200 192013 "http://10.1.10.110:3000/streams" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:36:18 +0000] "GET /stylesheets/style.css HTTP/1.1" 200 262 "http://10.1.10.110:3000/streams" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:36:18 +0000] "GET /stylesheets/custom.css HTTP/1.1" 200 1030 "http://10.1.10.110:3000/streams" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:36:18 +0000] "GET /javascripts/jquery-2.2.1.min.js HTTP/1.1" 200 85630 "http://10.1.10.110:3000/streams" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:36:18 +0000] "GET /javascripts/materialize.js HTTP/1.1" 200 278615 "http://10.1.10.110:3000/streams" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:36:18 +0000] "GET /javascripts/custom.js HTTP/1.1" 200 1794 "http://10.1.10.110:3000/streams" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:36:18 +0000] "GET /images/song_default.png HTTP/1.1" 304 - "http://10.1.10.110:3000/streams" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:36:18 +0000] "GET /images/waves.jpg HTTP/1.1" 200 153338 "http://10.1.10.110:3000/streams" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:36:18 +0000] "GET /images/roboto/Roboto-Regular.woff2 HTTP/1.1" 200 49236 "http://10.1.10.110:3000/streams" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+10.1.10.110 - - [12/May/2016:16:36:18 +0000] "GET /images/material-design-icons/Material-Design-Icons.woff2 HTTP/1.1" 304 - "http://10.1.10.110:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
