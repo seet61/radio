@@ -1,0 +1,335 @@
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+  <title>YourWave Radio</title>
+
+  <!-- CSS  -->
+  <link href="stylesheets/icon.css" rel="stylesheet">
+  <link href="stylesheets/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="stylesheets/style.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="stylesheets/custom.css" type="text/css" rel="stylesheet" media="screen,projection">
+
+  <!--  Scripts-->
+  <script src="javascripts/jquery-2.2.1.min.js"></script>
+  <script src="javascripts/materialize.js"></script>
+  <script src="javascripts/custom.js"></script>
+</head>
+<body>
+  <div id="background"></div>
+
+  <div id="content">
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="about" class="blue-text">О Нас</a></li>
+    </ul>
+
+    <nav class="lighten-1" role="navigation">
+      <ul class="right hide-on-med-and-down">
+        <li><a class="dropdown-button blue-text" href="index.html#!" data-activates="dropdown1">Информация<i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+
+      <a href="index.html" class="brand-logo center blue-text">YourWave Radio</a>
+
+    </nav>
+
+    <main>
+      <!-- Parts of templates-->
+<div class="section no-pad-bot" id="index-banner">
+  <div class="container">
+    <br><br>
+    <h1 class="header center blue-text">Добро пожаловать</h1>
+    <div class="row center">
+      <h4 class="header col s12 light flow-text blue-text">Данный сервис поможет Вам слушать различные радиостанции со всего мира</h4>
+    </div>
+
+    <div class="row">
+      <div class="col s12">
+        <ul class="tabs">
+          <li class="tab col s6"><a class="active" href="index.html#select">Выбор по жанру</a></li>
+          <li class="tab col s6"><a href="index.html#search">Поиск станции</a></li>
+        </ul>
+      </div>
+      <div id="select" class="col s12">
+        <div class="row">
+          <div class="row center">
+            <form class="col s12" action="http://10.1.10.110:3000/streams" method="post">
+              <div class="row">
+                  <div class="input-field col s6">
+                    <select id="category_id" name="category_id">
+                      <option value="" disabled selected>Выберите жанр</option>
+                        <option value="1">Trance</option>
+                        <option value="2">Rock</option>
+                        <option value="3">Dance</option>
+                        <option value="4">Talk &amp; Speech</option>
+                        <option value="5">Pop</option>
+                        <option value="6">Harddance</option>
+                        <option value="7">Hard Rock</option>
+                        <option value="8">Reggae</option>
+                        <option value="9">Rap</option>
+                        <option value="10">Classical</option>
+                        <option value="11">Jazz</option>
+                        <option value="12">Electronic</option>
+                        <option value="13">Hardstyle</option>
+                        <option value="14">Normal Rock</option>
+                        <option value="15">Top 40</option>
+                        <option value="16">Classic Rock</option>
+                        <option value="17">Modern Rock</option>
+                        <option value="18">Hip Hop</option>
+                        <option value="19">News</option>
+                        <option value="20">Schlager</option>
+                        <option value="21">House</option>
+                        <option value="22">Baroque</option>
+                        <option value="23">Mainstream Jazz</option>
+                        <option value="24">Classical period music</option>
+                        <option value="25">Roots Reggae</option>
+                        <option value="26">Lovers rock</option>
+                        <option value="27">Classic reggae</option>
+                        <option value="28">Politic</option>
+                        <option value="29">Conspiracy</option>
+                        <option value="30">JPOP</option>
+                        <option value="31">Singer &amp; Songwriter</option>
+                        <option value="32">R&amp;B/Urban</option>
+                        <option value="33">Classic R&amp;B</option>
+                        <option value="34">Motown</option>
+                        <option value="35">Funk</option>
+                        <option value="36">Soul</option>
+                        <option value="37">Light Rock</option>
+                        <option value="38">Decades</option>
+                        <option value="39">80s</option>
+                        <option value="40">90s</option>
+                        <option value="41">70s</option>
+                        <option value="42">Misc</option>
+                        <option value="43">Variety</option>
+                        <option value="44">Folk</option>
+                        <option value="45">Electronic Folk</option>
+                        <option value="46">Folk Rock</option>
+                        <option value="47">Country</option>
+                        <option value="48">Bluegrass</option>
+                        <option value="49">Classic Country</option>
+                        <option value="50">Oldies</option>
+                        <option value="51">60s</option>
+                        <option value="52">50s</option>
+                        <option value="53">40s</option>
+                        <option value="54">KPop</option>
+                        <option value="55">Bubblegum Pop</option>
+                        <option value="56">Progressive Rock</option>
+                        <option value="57">Dancehall</option>
+                        <option value="58">Religion</option>
+                        <option value="59">International</option>
+                        <option value="60">Hindi</option>
+                        <option value="61">African</option>
+                        <option value="62">Bollywood</option>
+                        <option value="63">Islamic</option>
+                        <option value="64">Chinese</option>
+                        <option value="65">Hebrew</option>
+                        <option value="66">Ambient</option>
+                        <option value="67">Chillstep</option>
+                        <option value="68">Adult Contemporary</option>
+                        <option value="69">Hot Adult Contemporary</option>
+                        <option value="70">Dubstep</option>
+                    </select>
+                    <label>Жанры</label>
+                  </div>
+                  <div class="input-field col s6">
+                    <select id="country_code" name="country_code">
+                      <option value="" disabled selected>Выберите страну</option>
+                        <option value="AU">Австралия</option>
+                        <option value="AT">Австрия</option>
+                        <option value="AZ">Азербайджан</option>
+                        <option value="AL">Албания</option>
+                        <option value="DZ">Алжир</option>
+                        <option value="AS">Американское Самоа</option>
+                        <option value="AO">Ангола</option>
+                        <option value="AD">Андорра</option>
+                        <option value="AG">Антигуа и Барбуда</option>
+                        <option value="AR">Аргентина</option>
+                        <option value="AM">Армения</option>
+                        <option value="AW">Аруба</option>
+                        <option value="AF">Афганистан</option>
+                        <option value="BS">Багамы</option>
+                        <option value="BD">Бангладеш</option>
+                        <option value="BB">Барбадос</option>
+                        <option value="BH">Бахрейн</option>
+                        <option value="BY">Беларусь</option>
+                        <option value="BZ">Белиз</option>
+                        <option value="BE">Бельгия</option>
+                        <option value="BM">Бермуды</option>
+                        <option value="BG">Болгария</option>
+                        <option value="BO">Боливия, Многонациональное Государство</option>
+                        <option value="BA">Босния и Герцеговина</option>
+                        <option value="BR">Бразилия</option>
+                        <option value="BT">Бутан</option>
+                        <option value="HU">Венгрия</option>
+                        <option value="VE">Венесуэла Боливарианская Республика</option>
+                        <option value="VG">Виргинские острова, Британские</option>
+                        <option value="VN">Вьетнам</option>
+                        <option value="GA">Габон</option>
+                        <option value="HT">Гаити</option>
+                        <option value="GY">Гайана</option>
+                        <option value="GM">Гамбия</option>
+                        <option value="GH">Гана</option>
+                        <option value="GP">Гваделупа</option>
+                        <option value="GT">Гватемала</option>
+                        <option value="DE">Германия</option>
+                        <option value="HN">Гондурас</option>
+                        <option value="HK">Гонконг</option>
+                        <option value="GD">Гренада</option>
+                        <option value="GR">Греция</option>
+                        <option value="GE">Грузия</option>
+                        <option value="DK">Дания</option>
+                        <option value="DO">Доминиканская Республика</option>
+                        <option value="EG">Египет</option>
+                        <option value="ZW">Зимбабве</option>
+                        <option value="IL">Израиль</option>
+                        <option value="IN">Индия</option>
+                        <option value="ID">Индонезия</option>
+                        <option value="JO">Иордания</option>
+                        <option value="IQ">Ирак</option>
+                        <option value="IR">Иран, Исламская Республика</option>
+                        <option value="IE">Ирландия</option>
+                        <option value="IS">Исландия</option>
+                        <option value="ES">Испания</option>
+                        <option value="IT">Италия</option>
+                        <option value="CV">Кабо-Верде</option>
+                        <option value="KZ">Казахстан</option>
+                        <option value="KH">Камбоджа</option>
+                        <option value="CM">Камерун</option>
+                        <option value="CA">Канада</option>
+                        <option value="QA">Катар</option>
+                        <option value="KE">Кения</option>
+                        <option value="CY">Кипр</option>
+                        <option value="KG">Киргизия</option>
+                        <option value="CN">Китай</option>
+                        <option value="CC">Кокосовые (Килинг) острова</option>
+                        <option value="CO">Колумбия</option>
+                        <option value="KR">Корея, Республика</option>
+                        <option value="CR">Коста-Рика</option>
+                        <option value="KW">Кувейт</option>
+                        <option value="LV">Латвия</option>
+                        <option value="LB">Ливан</option>
+                        <option value="LY">Ливийская Арабская Джамахирия</option>
+                        <option value="LI">Лихтенштейн</option>
+                        <option value="LT">Литва</option>
+                        <option value="LU">Люксембург</option>
+                        <option value="MU">Маврикий</option>
+                        <option value="MG">Мадагаскар</option>
+                        <option value="MY">Малайзия</option>
+                        <option value="UM">Малые Тихоокеанские отдаленные острова Соединенных Штатов</option>
+                        <option value="MT">Мальта</option>
+                        <option value="MA">Марокко</option>
+                        <option value="MX">Мексика</option>
+                        <option value="SI">Словения</option>
+                        <option value="MD">Молдова, Республика</option>
+                        <option value="MC">Монако</option>
+                        <option value="MS">Монтсеррат</option>
+                        <option value="NP">Непал</option>
+                        <option value="NG">Нигерия</option>
+                        <option value="NL">Нидерланды</option>
+                        <option value="NI">Никарагуа</option>
+                        <option value="NU">Ниуэ</option>
+                        <option value="NZ">Новая Зеландия</option>
+                        <option value="NC">Новая Каледония</option>
+                        <option value="NO">Норвегия</option>
+                        <option value="AE">Объединенные Арабские Эмираты</option>
+                        <option value="OM">Оман</option>
+                        <option value="CX">Остров Рождества</option>
+                        <option value="KY">Острова Кайман</option>
+                        <option value="PK">Пакистан</option>
+                        <option value="PS">Палестинская территория, оккупированная</option>
+                        <option value="PA">Панама</option>
+                        <option value="PY">Парагвай</option>
+                        <option value="PE">Перу</option>
+                        <option value="PL">Польша</option>
+                        <option value="PT">Португалия</option>
+                        <option value="PR">Пуэрто-Рико</option>
+                        <option value="MK">Республика Македония</option>
+                        <option value="RE">Реюньон</option>
+                        <option value="RU">Россия</option>
+                        <option value="RW">Руанда</option>
+                        <option value="RO">Румыния</option>
+                        <option value="SA">Саудовская Аравия</option>
+                        <option value="SN">Сенегал</option>
+                        <option value="VC">Сент-Винсент и Гренадины</option>
+                        <option value="LC">Сент-Люсия</option>
+                        <option value="RS">Сербия</option>
+                        <option value="SG">Сингапур</option>
+                        <option value="SY">Сирийская Арабская Республика</option>
+                        <option value="SK">Словакия</option>
+                        <option value="GB">Соединенное Королевство</option>
+                        <option value="US">Соединенные Штаты</option>
+                        <option value="SR">Суринам</option>
+                        <option value="SL">Сьерра-Леоне</option>
+                        <option value="TH">Таиланд</option>
+                        <option value="TW">Тайвань (Китай)</option>
+                        <option value="TZ">Танзания, Объединенная Республика</option>
+                        <option value="TG">Того</option>
+                        <option value="TK">Токелау</option>
+                        <option value="TT">Тринидад и Тобаго</option>
+                        <option value="TV">Тувалу</option>
+                        <option value="TN">Тунис</option>
+                        <option value="TR">Турция</option>
+                        <option value="UG">Уганда</option>
+                        <option value="UA">Украина</option>
+                        <option value="UY">Уругвай</option>
+                        <option value="FO">Фарерские острова</option>
+                        <option value="FJ">Фиджи</option>
+                        <option value="PH">Филиппины</option>
+                        <option value="FI">Финляндия</option>
+                        <option value="FR">Франция</option>
+                        <option value="HR">Хорватия</option>
+                        <option value="ME">Черногория</option>
+                        <option value="CZ">Чешская Республика</option>
+                        <option value="CL">Чили</option>
+                        <option value="CH">Швейцария</option>
+                        <option value="SE">Швеция</option>
+                        <option value="LK">Шри-Ланка</option>
+                        <option value="EC">Эквадор</option>
+                        <option value="SV">Эль-Сальвадор</option>
+                        <option value="EE">Эстония</option>
+                        <option value="ZA">Южная Африка</option>
+                        <option value="JM">Ямайка</option>
+                        <option value="JP">Япония</option>
+                    </select>
+                    <label>Страны</label>
+                  </div>
+              </div>
+              <div class="row center">
+                <button class="btn waves-effect waves-light blue" type="submit" name="action">Выбрать
+                  <i class="material-icons right blue">send</i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="search" class="col s12">
+        <div class="row">
+          <div class="row center">
+            <form class="col s12" action="http://10.1.10.110:3000/search" method="post">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input placeholder="Введите название станции" id="search_name" name="search_name" type="text" class="validate">
+                  <label for="search_name">Поиск станции</label>
+                </div>
+              </div>
+              <div class="row center">
+                <button class="btn waves-effect waves-light blue" type="submit" name="action">Выбрать
+                  <i class="material-icons right blue">send</i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <br><br>
+
+  </div>
+</div>
+    </main>
+
+
+    </div>
+  </body>

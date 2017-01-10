@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>YourWave Radio</title>
+
+  <!-- CSS  -->
+  <link href="stylesheets/icon.css" rel="stylesheet">
+  <link href="stylesheets/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="stylesheets/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="stylesheets/custom.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <!--  Scripts-->
+  <script src="javascripts/jquery-2.2.1.min.js"></script>
+  <script src="javascripts/materialize.js"></script>
+  <script src="javascripts/custom.js"></script>
+</head>
+<body>
+  <div id="background"></div>
+
+  <div id="content">
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="about" class="blue-text">О Нас</a></li>
+    </ul>
+
+    <nav class="lighten-1" role="navigation">
+      <ul class="right hide-on-med-and-down">
+        <li><a class="dropdown-button blue-text" href="about#!" data-activates="dropdown1">Информация<i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+
+      <a href="index.html" class="brand-logo center blue-text">YourWave Radio</a>
+
+    </nav>
+
+    <main>
+      <!-- Parts of templates-->
+<!-- <div class="container">
+  Мы рады Вам предоставить сервис для прослушивания эфирного вещания радиостанций со всего мира!
+</div>
+ -->
+
+<!-- <div class="section no-pad-bot" id="index-banner">
+  <div class="container">
+    <br><br>
+    <h1 class="header center blue-text">Добро пожаловать</h1>
+    <div class="row center">
+      <h4 class="header col s12 light flow-text blue-text">Данный сервис поможет Вам слушать различные радиостанции со всего мира</h4>
+    </div>
+
+
+  </div>
+</div>
+ -->
+
+<script>
+if('webkitAudioContext' in window) {
+    var myAudioContext = new webkitAudioContext();
+    }
+
+    request = new XMLHttpRequest();
+    request.open('GET', 'http://listen.radionomy.com/MassiveRadio', true);
+    request.responseType = 'arraybuffer';
+    request.addEventListener('load', bufferSound, false);
+    request.send();
+
+
+    function bufferSound(event) {
+      var request = event.target;
+      var source = myAudioContext.createBufferSource();
+      source.buffer = myAudioContext.createBuffer(request.response, false);
+      source.connect(myAudioContext.destination);
+      source.noteOn(0);
+    }
+</script>
+    </main>
+
+
+    </div>
+  </body>
+</html>
